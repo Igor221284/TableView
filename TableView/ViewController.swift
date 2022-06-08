@@ -7,54 +7,43 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController{
     
     
     private lazy var myTableView: UITableView = {
-        let tableView = UITableView(frame: view.bounds, style: .grouped)
-        tableView.dataSource = self
-        tableView.delegate = self
+        let tableView = UITableView()
+        tableView.dataSource = dataSource
+        tableView.delegate = dataSource
+        tableView.register(SettingsCell.self, forCellReuseIdentifier: "\(SettingsCell.self)")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
+    
+    let dataSource = SettingsDataSource()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
-        setupHierarchy()
-        setupLayout()
+        setupUI()
     }
 
-    private func setupLayout() {
-        myTableView.translatesAutoresizingMaskIntoConstraints = false
-        myTableView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
-        myTableView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor).isActive = true
-        myTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        myTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        myTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10).isActive = true
-        myTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20).isActive = true
+    private func setupUI() {
+        addSubviews()
+        setupConstraints()
+    }
+    
+    
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            myTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            myTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            myTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            myTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
+        ])
     }
 
-    private func setupHierarchy() {
+    private func addSubviews() {
         view.addSubview(myTableView)
-    }
-    
-    private func setupView() {
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
-    }
-    
-   // MARK: - DataSource
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 3
     }
 
 }
