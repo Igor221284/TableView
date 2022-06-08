@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     private func setupView() {
-        myTableView.register(CustomTableViewCell.self, forCellReuseIdentifier: <#T##String#>)
+        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "\(UITableViewCell.self)")
     }
     
    // MARK: - DataSource
