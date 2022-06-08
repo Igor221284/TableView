@@ -13,6 +13,7 @@
 		04C28F7D2850A15B001B3B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C28F7B2850A15B001B3B94 /* Main.storyboard */; };
 		04C28F7F2850A15C001B3B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C28F7E2850A15C001B3B94 /* Assets.xcassets */; };
 		04C28F822850A15C001B3B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C28F802850A15C001B3B94 /* LaunchScreen.storyboard */; };
+		04C28F8A2850B348001B3B94 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C28F892850B348001B3B94 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		04C28F7E2850A15C001B3B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C28F812850A15C001B3B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C28F832850A15C001B3B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C28F892850B348001B3B94 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				04C28F7E2850A15C001B3B94 /* Assets.xcassets */,
 				04C28F802850A15C001B3B94 /* LaunchScreen.storyboard */,
 				04C28F832850A15C001B3B94 /* Info.plist */,
+				04C28F892850B348001B3B94 /* TableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				04C28F7A2850A15B001B3B94 /* ViewController.swift in Sources */,
 				04C28F762850A15B001B3B94 /* AppDelegate.swift in Sources */,
 				04C28F782850A15B001B3B94 /* SceneDelegate.swift in Sources */,
+				04C28F8A2850B348001B3B94 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,6 +324,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
